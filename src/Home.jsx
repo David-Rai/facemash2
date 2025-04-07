@@ -42,7 +42,7 @@ const Home = () => {
       <Nav addition={"absolute top-0"} />
       <div className="centerw-[40%] h-[40vh]">
         <img src={randomImage} alt="randomimage" className="h-[90%] object-contain"/>
-        <div className="icons flex w-full items-center justify-evenly  py-3">
+        <div className="icons flex w-full items-center justify-between  py-3">
           <RxCross1 onClick={deleteFav} className="transition-all active:bg-red-100 text-white rounded-full bg-red-500 p-4" size={60}/>
           <CiHeart  onClick={addFav} className="transition-all active:bg-blue-100  text-white rounded-full bg-blue-500 p-4" size={60}/>
         </div>
