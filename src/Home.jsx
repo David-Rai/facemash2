@@ -28,6 +28,10 @@ const Home = () => {
    getData()
   }
 
+  //deleting from the favourite
+  const deleteFav=()=>{
+  getData()
+  }
       //fetching the random image from the database
   useEffect(() => {
     getData();
@@ -38,10 +42,9 @@ const Home = () => {
       <Nav addition={"absolute top-0"} />
       <div className="centerw-[40%] h-[40vh]">
         <img src={randomImage} alt="randomimage" className="h-[90%] object-contain"/>
-
         <div className="icons flex w-full items-center justify-evenly  py-3">
-          <RxCross1 className="text-white rounded-full bg-red-500 p-4" size={60}/>
-          <CiHeart  onClick={addFav} className="text-white rounded-full bg-blue-500 p-4" size={60}/>
+          <RxCross1 onClick={deleteFav} className="transition-all active:bg-red-100 text-white rounded-full bg-red-500 p-4" size={60}/>
+          <CiHeart  onClick={addFav} className="transition-all active:bg-blue-100  text-white rounded-full bg-blue-500 p-4" size={60}/>
         </div>
       </div>
     </main>
