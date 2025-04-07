@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Gender from "./Gender";
 
 const Nav = ({ addition }) => {
   return (
@@ -11,7 +12,7 @@ const Nav = ({ addition }) => {
         w-full flex items-center justify-evenly ${addition}`}
     >
       <Link to="/">Home</Link>
-      <Link to="/gender">Gender</Link>
+        <Gender />
       <Link to="/favourite">Favourites</Link>
     </nav>
   );

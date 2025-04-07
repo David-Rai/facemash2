@@ -23,13 +23,15 @@ const Favourite = () => {
             return (
               <section
                 key={index}
-                className="w-full
-                   flex gap-[50px] flex-row items-center h-[100px] bg-slate-400"
+                className="w-full lg:w-[40%]
+                   bg-gray-200
+                   rounded-md backdrop-blur-md
+                  flex gap-[50px] flex-row items-center h-[100px]"
               >
                 <img
                   src={f.randomImage}
                   alt="favourite image"
-                  className="h-full"
+                  className="h-full rounded-lg"
                 />
                 <div className="details">
                   <h1 className="text-2xl capitalize">{f.details.name}</h1>
@@ -37,7 +39,7 @@ const Favourite = () => {
                 </div>
 
                 <div
-                  className="delete absolute right-[40px]"
+                  className=" text-red-700 transition-all active:bg-blue-100 bg-slate-300 p-5 rounded-full delete absolute right-[40px]"
                   onClick={() => handleDelete(index)}
                 >
                   <RiDeleteBin6Line />

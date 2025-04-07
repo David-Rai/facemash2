@@ -18,14 +18,6 @@ const router = createBrowserRouter([
       </>
     ),
   },
-{
-    path: "/gender",
-    element: (
-      <>
-        <Gender />
-      </>
-    ),
-  },
   {
     path: "/favourite",
     element: (
