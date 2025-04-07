@@ -17,14 +17,14 @@ const Home = () => {
   //Function to fetch random image
   async function getData() {
     const res = await getDatas();
-    // setDetails(res)
+    setDetails({name:res.results[0].name.first,location:res.results[0].location.country})
     setRandomImage(res.results[0].picture.large);
   }
  
 
   //adding to the favourite
   const addFav=()=>{
-   dispatch({type:Actions.add,payload:randomImage})
+   dispatch({type:Actions.add,payload:{randomImage,details}})
    getData()
   }
 
@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <main className="h-screen w-full bg-slate-100 flex flex-col items-center justify-center">
-      <Nav className="absolute top-0" />
+      <Nav addition={"absolute top-0"} />
       <div className="centerw-[40%] h-[40vh]">
         <img src={randomImage} alt="randomimage" className="h-[90%] object-contain"/>
 

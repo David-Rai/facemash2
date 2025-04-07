@@ -1,9 +1,10 @@
-import { Children, useReducer } from "react";
+import { useReducer } from "react";
 import  {createContext} from 'react'
 
 //All the actions to do
 const Actions = {
   add: "addFav",
+  delete: "deleteFav",
 };
 
 
@@ -14,6 +15,9 @@ const reducer = (state, action) => {
   switch (action.type) {
     case Actions.add:
       return { favs: [...state.favs, action.payload] };
+
+      case Actions.delete:
+      return {favs:state.favs.filter((f,index)=> index != action.payload)}
   }
 };
 
